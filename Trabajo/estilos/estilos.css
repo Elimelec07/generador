@@ -1,0 +1,255 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+font-family: 'Amatic SC', cursive;
+}
+body{
+    background: black;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background: rgb(225, 244, 19);
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.contenedor{
+    width: 98%;
+
+}
+h1{
+    float: left;
+}
+header .contendedor{
+    display: table;
+}
+#fa-bars{
+    display: none;
+}
+header label{
+    float: right;
+    font-size: 30px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.menu{
+    position: absolute;
+    font-size: 30px;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(250, 250, 27, 0.569);
+    transition: 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a{
+    display: block;
+    color: black;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.504);
+}
+
+.menu a:hover{
+    background-color: rgba(0, 0, 0, 0.819);
+    transition: 0.2s;
+}
+
+#fa-bars:checked ~ .menu{
+    transform: translateX(0%)
+}
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/*banner*/
+#banner{
+    margin-top: 50px;
+    position: relative;
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+#banner .contenedor2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgb(0, 0, 0);
+}
+#banner h2{
+    font-size: 100px;
+}
+#banner a{
+    display: block;
+    width: 200px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid black;
+    font-size: 28px;
+}
+#banner a:hover{
+    background-color: rgba(0, 0, 0, 0.454);
+}
+#banner p{
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+/*bienvenido*/
+
+#bienvenido{
+    text-align: center;
+    background-color: black;
+    color: #fff;
+}
+#bienvenido p{
+    font-size: 20px;
+}
+
+/*blog*/
+
+#blog h3, h4{
+    text-align: center;
+}
+#blog .contenedor3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#blog article{
+    margin: 15px;
+}
+
+#blog img{
+    width: 100%;
+    max-width: 280px;
+}
+
+#blog {
+    background: black;
+    color: white;
+}
+
+
+
+/*contenedor4*/
+#info{
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    color: whitesmoke;
+    text-align: center;
+}
+
+#info .contenedor4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedor4{
+    margin: 20px;
+
+}
+
+#info  img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+
+/*contenedor5*/
+
+footer.contenedor5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer p{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.copy{
+    font-size: 20px;
+}
+
+.sociales{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+
+}
+.sociales a {
+    color: white;
+    text-decoration: none;
+}
+
+/*parte responsive*/
+
+@media(max-width: 700px){
+    /*banner*/
+    #banner h2{
+        font-size: 30px;
+    }
+    #banner a{
+        display: block;
+        width: 150px;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px;
+        margin-top: 5px;
+        border: 3px solid black;
+        font-size: 18px;
+    }
+    #banner p{
+        font-size: 15px;
+        font-weight: 300;
+        color: white;
+    }
+}
+/*responsive tamaño web*/
+
+@media(min-width: 1000px){
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+        background-color:  rgb(225, 244, 19);
+        margin-top:-5px;
+    }
+    .menu a {
+        border: none;
+        font-weight: 600;
+        align-items: center;
+        }
+    header label{
+        display: none;
+    }
+    .menu a:hover{
+        background-color: black;
+        font-size: 20px;
+        color: white;
+        transition: 0.3s;
+        border-radius: 10px;
+    }
+}
